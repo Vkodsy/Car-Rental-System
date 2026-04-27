@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connected));
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -67,13 +74,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Search = new System.Windows.Forms.TabControl();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -116,7 +116,64 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(443, 373);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Book A Car";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(170, 40);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(82, 15);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "State Name";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(173, 129);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(105, 22);
+            this.textBox15.TabIndex = 25;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(174, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(63, 15);
+            this.label20.TabIndex = 24;
+            this.label20.Text = "Country";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(17, 345);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(105, 22);
+            this.textBox14.TabIndex = 23;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 312);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 15);
+            this.label19.TabIndex = 22;
+            this.label19.Text = "Mobile";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(17, 270);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(105, 22);
+            this.textBox13.TabIndex = 21;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(18, 252);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 15);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "SSN";
             // 
             // button4
             // 
@@ -281,7 +338,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(443, 373);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "View Car Details";
             // 
             // button2
             // 
@@ -338,7 +395,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(443, 373);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Search Car";
             // 
             // button1
             // 
@@ -460,67 +517,10 @@
             this.label17.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.label17.Location = new System.Drawing.Point(24, 24);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(479, 50);
+            this.label17.Size = new System.Drawing.Size(471, 49);
             this.label17.TabIndex = 1;
             this.label17.Text = "Booking And Search";
             this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(18, 252);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 15);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "SSN";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(17, 270);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(105, 22);
-            this.textBox13.TabIndex = 21;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(18, 312);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 15);
-            this.label19.TabIndex = 22;
-            this.label19.Text = "Mobile";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(17, 345);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(105, 22);
-            this.textBox14.TabIndex = 23;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(174, 108);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(63, 15);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Country";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(173, 129);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(105, 22);
-            this.textBox15.TabIndex = 25;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(170, 40);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(82, 15);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "State Name";
             // 
             // button5
             // 
