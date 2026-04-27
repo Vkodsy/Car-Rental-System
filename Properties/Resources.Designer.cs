@@ -203,6 +203,16 @@ namespace Phase2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edited2 {
+            get {
+                object obj = ResourceManager.GetObject("edited2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sandy_Bus_44_Single_09 {
             get {
                 object obj = ResourceManager.GetObject("Sandy_Bus-44_Single-09", resourceCulture);
