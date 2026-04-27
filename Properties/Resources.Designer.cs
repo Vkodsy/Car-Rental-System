@@ -103,9 +103,39 @@ namespace Phase2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _34593981_8193511_Photoroom1 {
+            get {
+                object obj = ResourceManager.GetObject("34593981_8193511-Photoroom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _34593981_8193511_Photoroom2 {
+            get {
+                object obj = ResourceManager.GetObject("34593981_8193511-Photoroom2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8193493_Photoroom {
             get {
                 object obj = ResourceManager.GetObject("8193493-Photoroom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8193493_Photoroom1 {
+            get {
+                object obj = ResourceManager.GetObject("8193493-Photoroom1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,46 @@ namespace Phase2.Properties {
         internal static System.Drawing.Bitmap _9605584_Photoroom1 {
             get {
                 object obj = ResourceManager.GetObject("9605584-Photoroom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edited1 {
+            get {
+                object obj = ResourceManager.GetObject("edited1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edited11 {
+            get {
+                object obj = ResourceManager.GetObject("edited11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edited12 {
+            get {
+                object obj = ResourceManager.GetObject("edited12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edited13 {
+            get {
+                object obj = ResourceManager.GetObject("edited13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
