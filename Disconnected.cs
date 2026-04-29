@@ -29,8 +29,8 @@ namespace Phase2
             dataGridView1.DataSource = null;
             string col = comboBox1.Text == "ALL" ? "*" : comboBox1.Text;
             string cmd = textBox1.Text == ""
-                ? $"SELECT {col} FROM CAR_CUSTOMERS ORDER BY id"
-                : $"SELECT {col} FROM CAR_CUSTOMERS WHERE id = :id ORDER BY id";
+                ? $"SELECT {col} FROM USERS ORDER BY USER_ID"
+                : $"SELECT {col} FROM USERS WHERE USER_ID = :id ORDER BY USER_ID";
             
             adapter = new OracleDataAdapter(cmd, conn);
 
@@ -88,7 +88,7 @@ namespace Phase2
 
             cmd = @"SELECT COLUMN_NAME 
         FROM USER_TAB_COLUMNS 
-        WHERE TABLE_NAME = 'CAR_CUSTOMERS'
+        WHERE TABLE_NAME = 'USERS'
         ORDER BY COLUMN_ID";
 
             OracleDataAdapter adapter = new OracleDataAdapter(cmd, conn);
