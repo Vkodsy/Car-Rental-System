@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Phase2
 {
+    
     public partial class Connected : Form
     {
         public Connected()
@@ -53,6 +54,11 @@ namespace Phase2
             this.Hide();
             main.ShowDialog();
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

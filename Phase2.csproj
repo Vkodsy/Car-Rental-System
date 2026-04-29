@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\app\Jojito\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -127,6 +131,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\34593981_8193511-Photoroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34593981_8193511-Photoroom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34593981_8193511-Photoroom2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8193493-Photoroom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
