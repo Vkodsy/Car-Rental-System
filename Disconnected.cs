@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
 
 namespace Phase2
 {
     public partial class Disconnected : Form
     {
+        string conn = "Data source=orcl; User Id=scott; Password=scott;";
+        string cmd = "";
+        OracleDataAdapter adapter;
+        OracleCommandBuilder builder;
+        DataSet ds;
         public Disconnected()
         {
             InitializeComponent();
@@ -19,6 +26,29 @@ namespace Phase2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
+            string col = comboBox1.Text;
+            if (col == "ALL") { col = "*"; };
+            cmd = string.Format("select {0} from CAR_CUSTOMERS where id =:id order by id", col);
+            string cmdAll = string.Format("select {0} from CAR_CUSTOMERS order by id", col);
+
+            if (textBox1.Text == "")
+            {
+                adapter = new OracleDataAdapter(cmdAll, conn);
+            }
+            else { 
+                adapter = new OracleDataAdapter(cmd, conn);
+            }
+            adapter.SelectCommand.Parameters.Add("id", textBox1.Text);
+            ds = new DataSet();
+            adapter.Fill(ds);
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            else {
+                MessageBox.Show("User doesn't exist!");
+            }
 
         }
 
@@ -52,6 +82,30 @@ namespace Phase2
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Disconnected_Load(object sender, EventArgs e)
+        {
+            cmd = @"SELECT COLUMN_NAME 
+        FROM USER_TAB_COLUMNS 
+        WHERE TABLE_NAME = 'CAR_CUSTOMERS'
+        ORDER BY COLUMN_ID";
+
+            OracleDataAdapter adapter = new OracleDataAdapter(cmd, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            DataRow row = dt.NewRow();
+            row["COLUMN_NAME"] = "ALL";
+            dt.Rows.InsertAt(row, 0);
+            comboBox1.DataSource = dt;
+            comboBox1.DisplayMember = "COLUMN_NAME";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            builder = new OracleCommandBuilder(adapter);
+            adapter.Update(ds.Tables[0]);
         }
     }
 }
