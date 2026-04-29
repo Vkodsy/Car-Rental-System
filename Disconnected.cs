@@ -27,19 +27,18 @@ namespace Phase2
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            string col = comboBox1.Text;
-            if (col == "ALL") { col = "*"; };
-            cmd = string.Format("select {0} from CAR_CUSTOMERS where id =:id order by id", col);
-            string cmdAll = string.Format("select {0} from CAR_CUSTOMERS order by id", col);
+            string col = comboBox1.Text == "ALL" ? "*" : comboBox1.Text;
+            string cmd = textBox1.Text == ""
+                ? $"SELECT {col} FROM CAR_CUSTOMERS ORDER BY id"
+                : $"SELECT {col} FROM CAR_CUSTOMERS WHERE id = :id ORDER BY id";
+            
+            adapter = new OracleDataAdapter(cmd, conn);
 
-            if (textBox1.Text == "")
+            if (!string.IsNullOrWhiteSpace(textBox1.Text))
             {
-                adapter = new OracleDataAdapter(cmdAll, conn);
+                adapter.SelectCommand.Parameters.Add("id", textBox1.Text);
             }
-            else { 
-                adapter = new OracleDataAdapter(cmd, conn);
-            }
-            adapter.SelectCommand.Parameters.Add("id", textBox1.Text);
+
             ds = new DataSet();
             adapter.Fill(ds);
             if (ds.Tables[0].Rows.Count != 0)
@@ -86,6 +85,7 @@ namespace Phase2
 
         private void Disconnected_Load(object sender, EventArgs e)
         {
+
             cmd = @"SELECT COLUMN_NAME 
         FROM USER_TAB_COLUMNS 
         WHERE TABLE_NAME = 'CAR_CUSTOMERS'
