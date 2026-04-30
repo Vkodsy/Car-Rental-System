@@ -126,54 +126,46 @@ namespace Phase2
         // 5. Fixed the nested method syntax error here
         private void button4_Click(object sender, EventArgs e)
         {
-            // Ensure the user actually selected a car model from the drop down
             if (comboBox1.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select a car model from the drop down list first.");
                 return;
             }
 
-            // 6. Retrieve the exact car ID that matches the selected model
             int selectedCarId = retrievedCarIds[comboBox1.SelectedIndex];
 
             try
             {
-                // Insert Rental
-                OracleCommand userCmd = new OracleCommand();
-                userCmd.Connection = conn;
-                userCmd.CommandText = "Insert_Rental";
-                userCmd.CommandType = CommandType.StoredProcedure;
-
-                userCmd.Parameters.Add("RID", int.Parse(textBox5.Text));
-                userCmd.Parameters.Add("fname", textBox6.Text);
-                userCmd.Parameters.Add("lname", textBox7.Text);
-                userCmd.Parameters.Add("email", textBox8.Text);
-                userCmd.Parameters.Add("ssn", textBox13.Text);
-                userCmd.Parameters.Add("mobile", textBox14.Text);
-                userCmd.Parameters.Add("state", textBox9.Text);
-                userCmd.Parameters.Add("country", textBox15.Text);
-                userCmd.ExecuteNonQuery();
-
-                // Insert Booking
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "Insert_Booking";
+                OracleCommand cmd = new OracleCommand("Create_User_And_Booking", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("p_customer_id", int.Parse(textBox5.Text));
+                // User Parameters
+                cmd.Parameters.Add("p_user_id", int.Parse(textBox5.Text));
+                cmd.Parameters.Add("p_fname", textBox6.Text);
+                cmd.Parameters.Add("p_lname", textBox7.Text);
+                cmd.Parameters.Add("p_email", textBox8.Text);
 
-                // 7. Use the mapped 'selectedCarId' here instead of txtCarId.Text
+                // --- THIS IS THE FIX ---
+                // Convert the text from the textboxes into numbers before sending
+                cmd.Parameters.Add("p_ssn", int.Parse(textBox13.Text));
+                cmd.Parameters.Add("p_mobile", int.Parse(textBox14.Text));
+                // -------------------------
+
+                cmd.Parameters.Add("p_state", textBox9.Text);
+                cmd.Parameters.Add("p_country", textBox15.Text);
+
+                // Booking Parameters
                 cmd.Parameters.Add("p_car_id", selectedCarId);
                 cmd.Parameters.Add("p_pickup_date", Convert.ToDateTime(textBox10.Text));
                 cmd.Parameters.Add("p_return_date", Convert.ToDateTime(textBox11.Text));
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Booking created successfully for Car ID: " + selectedCarId);
+                MessageBox.Show("Booking created successfully!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred during booking: " + ex.Message);
+                MessageBox.Show("A critical error occurred: " + ex.Message);
             }
         }
     }
