@@ -42,5 +42,13 @@ namespace Phase2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ReportForm  reportForm = new ReportForm();    
+            this.Hide();
+            reportForm.ShowDialog();
+            this.Show();
+        }
     }
 }
