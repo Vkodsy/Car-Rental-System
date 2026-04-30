@@ -168,5 +168,10 @@ namespace Phase2
                 MessageBox.Show("A critical error occurred: " + ex.Message);
             }
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

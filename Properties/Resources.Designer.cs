@@ -123,6 +123,26 @@ namespace Phase2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _34593981_8193511_Photoroom3 {
+            get {
+                object obj = ResourceManager.GetObject("34593981_8193511-Photoroom3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _34593981_8193511_Photoroom4 {
+            get {
+                object obj = ResourceManager.GetObject("34593981_8193511-Photoroom4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8193493_Photoroom {
             get {
                 object obj = ResourceManager.GetObject("8193493-Photoroom", resourceCulture);
@@ -206,6 +226,16 @@ namespace Phase2.Properties {
         internal static System.Drawing.Bitmap edited2 {
             get {
                 object obj = ResourceManager.GetObject("edited2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edited3 {
+            get {
+                object obj = ResourceManager.GetObject("edited3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
