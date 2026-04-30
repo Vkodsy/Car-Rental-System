@@ -112,5 +112,10 @@ namespace Phase2
             builder = new OracleCommandBuilder(adapter);
             adapter.Update(ds.Tables[0]);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

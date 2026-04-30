@@ -40,11 +40,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MintCream;
-            this.label1.Location = new System.Drawing.Point(449, 73);
+            this.label1.Location = new System.Drawing.Point(436, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(424, 46);
+            this.label1.Size = new System.Drawing.Size(391, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Car Renting System";
             // 
