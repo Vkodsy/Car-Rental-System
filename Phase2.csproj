@@ -154,7 +154,28 @@
     <None Include="Resources\34593981_8193511-Photoroom.png" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <None Include="Resources\34593981_8193511-Photoroom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34593981_8193511-Photoroom2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8193493-Photoroom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edited2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
