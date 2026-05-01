@@ -86,7 +86,6 @@ namespace Phase2
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // 2. Clear lists to prevent mixing old and new searches
             retrievedCarIds.Clear();
             comboBox1.Items.Clear();
             comboBox2.Items.Clear();
@@ -97,7 +96,6 @@ namespace Phase2
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
 
-            // 3. Added 'cars.car_id' to the beginning of the SELECT statement
             cmd.CommandText = "select cars.car_id, Model, Car_type, country, city, year from cars, locations where brand=:n and cars.current_location_id=locations.location_id";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("n", textBox1.Text);
@@ -105,15 +103,12 @@ namespace Phase2
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                // 4. Store the car_id in our background list
                 retrievedCarIds.Add(Convert.ToInt32(dr[0]));
-
-                // Add the rest to the comboboxes (shifted +1 because of car_id)
-                comboBox1.Items.Add(dr[1]); // Model
-                comboBox2.Items.Add(dr[2]); // Car_type
-                comboBox4.Items.Add(dr[3]); // Country
-                comboBox3.Items.Add(dr[4]); // City
-                comboBox5.Items.Add(dr[5]); // Year
+                comboBox1.Items.Add(dr[1]); 
+                comboBox2.Items.Add(dr[2]); 
+                comboBox4.Items.Add(dr[3]); 
+                comboBox3.Items.Add(dr[4]); 
+                comboBox5.Items.Add(dr[5]); 
             }
             dr.Close();
 
@@ -123,7 +118,7 @@ namespace Phase2
             }
         }
 
-        // 5. Fixed the nested method syntax error here
+       
         private void button4_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == -1)
@@ -139,22 +134,14 @@ namespace Phase2
                 OracleCommand cmd = new OracleCommand("Create_User_And_Booking", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                // User Parameters
                 cmd.Parameters.Add("p_user_id", int.Parse(textBox5.Text));
                 cmd.Parameters.Add("p_fname", textBox6.Text);
                 cmd.Parameters.Add("p_lname", textBox7.Text);
                 cmd.Parameters.Add("p_email", textBox8.Text);
-
-                // --- THIS IS THE FIX ---
-                // Convert the text from the textboxes into numbers before sending
                 cmd.Parameters.Add("p_ssn", int.Parse(textBox13.Text));
                 cmd.Parameters.Add("p_mobile", int.Parse(textBox14.Text));
-                // -------------------------
-
                 cmd.Parameters.Add("p_state", textBox9.Text);
                 cmd.Parameters.Add("p_country", textBox15.Text);
-
-                // Booking Parameters
                 cmd.Parameters.Add("p_car_id", selectedCarId);
                 cmd.Parameters.Add("p_pickup_date", Convert.ToDateTime(textBox10.Text));
                 cmd.Parameters.Add("p_return_date", Convert.ToDateTime(textBox11.Text));

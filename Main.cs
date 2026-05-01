@@ -43,7 +43,7 @@ namespace Phase2
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        /*rivate void button4_Click(object sender, EventArgs e)
         {
             ReportView  reportForm = new ReportView();    
             this.Hide();
@@ -53,6 +53,6 @@ namespace Phase2
 
 
 
-        }
+        }*/
     }
 }
